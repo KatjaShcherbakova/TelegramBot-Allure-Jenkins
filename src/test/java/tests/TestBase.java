@@ -8,14 +8,14 @@ import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Tag;
+
 
 import static helpers.AttachmentsHelper.*;
 
 
 @Epic("QA.GURU automation course")
 @Story("tests with video")
-@Tag("google")
+
 class TestBase {
 
     @BeforeEach
