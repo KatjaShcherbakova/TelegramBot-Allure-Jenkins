@@ -56,3 +56,9 @@ task yandex_tests(type: Test) {
         includeTags 'yandex'
     }
 }
+task all_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'yandex'
+        includeTags 'google'
+    }
+}
