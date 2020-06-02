@@ -36,5 +36,4 @@ class TestBase {
         closeWebDriver();
     }
 
-
 }

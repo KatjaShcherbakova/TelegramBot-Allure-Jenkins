@@ -26,13 +26,14 @@ class YandexTests extends TestBase {
         open(url);
 
         $("#header-search").setValue(item).pressEnter();
-//
         $(".n-snippet-cell2__title").click();
         switchTo().window(1);
         $("html").shouldHave(text(item));
 
 
     }
+
+
     @Test
     @Description("We look for Item on Yandex, we don`t want it to find ")
     @DisplayName("Negative Test by Search")
