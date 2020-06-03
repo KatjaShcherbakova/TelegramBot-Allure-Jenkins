@@ -23,12 +23,12 @@ class YandexTests extends TestBase {
     @Description("We look for Item on Yandex")
     @DisplayName("Positive Test by Search")
     void successfulSearchItem() {
-        open(url);
+        open(urlYandexMarket);
 
-        $("#header-search").setValue(item).pressEnter();
+        $("#header-search").setValue(itemYandexMarket).pressEnter();
         $(".n-snippet-cell2__title").click();
         switchTo().window(1);
-        $("html").shouldHave(text(item));
+        $("html").shouldHave(text(itemYandexMarket));
 
 
     }
@@ -37,13 +37,14 @@ class YandexTests extends TestBase {
     @Test
     @Description("We look for Item on Yandex, we don`t want it to find ")
     @DisplayName("Negative Test by Search")
-    void unsuccessfulSearchItem() {
-        open(url);
 
-        $("#header-search").setValue(item).pressEnter();
+    void unsuccessfulSearchItem() {
+        open(urlYandexMarket);
+
+        $("#header-search").setValue(itemYandexMarket).pressEnter();
         $(".n-snippet-cell2__title").click();
         switchTo().window(1);
-        $("html").shouldNotHave(text(item));
+        $("html").shouldNotHave(text(itemYandexMarket));
 
 
     }
